@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogo de Adivinhação</title>
+
+    <!-- Conexão com o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Estrutura principal do jogo -->
+    <main class="jogo">
+
+        <!-- Cabeçalho -->
+        <header class="cabecalho">
+            <span class="icone">✦</span>
+            <p class="subtitulo">DESAFIO DE PALAVRAS</p>
+            <h1>Adivinhe a Palavra</h1>
+            <p class="descricao">
+                Teste seus conhecimentos e descubra a palavra secreta!
+            </p>
+        </header>
+
+        <!-- Informações da partida -->
+        <section class="informacoes">
+
+            <div class="cartao-info">
+                <span>📚 Categoria</span>
+                <strong id="categoria">---</strong>
+            </div>
+
+            <div class="cartao-info">
+                <span>❤️ Tentativas</span>
+                <strong id="tentativas">6</strong>
+            </div>
+
+        </section>
+
+        <!-- Dica da palavra -->
+        <section class="area-dica">
+            <span>💡 Dica para descobrir:</span>
+            <p id="dica">A dica aparecerá aqui.</p>
+        </section>
+
+        <!-- Palavra escondida -->
+        <section class="area-palavra">
+            <p id="palavra">_ _ _ _ _</p>
+        </section>
+
+        <!-- Campo para digitar uma letra -->
+        <section class="area-entrada">
+
+            <label for="letra">Digite uma letra:</label>
+
+            <div class="entrada">
+                <input
+                    id="letra"
+                    type="text"
+                    maxlength="1"
+                    autocomplete="off"
+                    placeholder="?"
+                >
+
+                <button id="btn-tentar" type="button">
+                    Tentar
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Mensagem do jogo -->
+        <p id="mensagem" aria-live="polite">
+            Boa sorte! Vamos começar?
+        </p>
+
+        <!-- Letras já utilizadas -->
+        <section class="area-letras">
+            <span>🔤 Letras utilizadas:</span>
+            <p id="letras-usadas">Nenhuma</p>
+        </section>
+
+        <!-- Botão para reiniciar a partida -->
+        <button id="btn-reiniciar" type="button">
+            ↻ Nova partida
+        </button>
+
+        <!-- Rodapé -->
+        <footer>
+            Desenvolvido para a disciplina de Web I
+        </footer>
+
+    </main>
+
+    <!-- Conexão com o arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+

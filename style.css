@@ -1,0 +1,255 @@
+
+/* 1. Configurações gerais da página */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 25px;
+    background: linear-gradient(135deg, #e7e3ff, #f8e9ff);
+    color: #30294d;
+}
+
+/* 2. Cartão principal do jogo */
+.jogo {
+    width: 100%;
+    max-width: 550px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(70, 52, 130, 0.15);
+}
+
+/* 3. Cabeçalho */
+.icone {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #eeeaff;
+    color: #7359c7;
+    font-size: 25px;
+}
+
+.subtitulo {
+    margin-top: 15px;
+    color: #8069c8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #453477;
+    font-size: 30px;
+}
+
+.descricao {
+    color: #77718a;
+    line-height: 1.5;
+}
+
+/* 4. Informações da partida */
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 28px 0 20px;
+}
+
+.cartao-info {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+    padding: 15px;
+    background-color: #f3f0ff;
+    border-radius: 12px;
+}
+
+.cartao-info span {
+    color: #77718a;
+    font-size: 13px;
+}
+
+.cartao-info strong {
+    color: #6049ad;
+    font-size: 18px;
+}
+
+/* 5. Área da dica */
+.area-dica {
+    padding: 15px;
+    background-color: #fff8e9;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.area-dica span {
+    color: #a47728;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.area-dica p {
+    margin-bottom: 0;
+    color: #74654c;
+    line-height: 1.5;
+}
+
+/* 6. Exibição da palavra */
+.area-palavra {
+    margin: 30px 0;
+    padding: 20px 10px;
+    background-color: #f8f6ff;
+    border-radius: 14px;
+}
+
+#palavra {
+    margin: 0;
+    color: #6049ad;
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    font-weight: bold;
+    letter-spacing: 7px;
+    overflow-wrap: anywhere;
+}
+
+/* 7. Campo de entrada */
+.area-entrada label {
+    display: block;
+    margin-bottom: 12px;
+    color: #453477;
+    font-weight: bold;
+}
+
+.entrada {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+input {
+    width: 65px;
+    padding: 12px;
+    border: 2px solid #d8d0f5;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+input:focus {
+    border-color: #8069c8;
+    box-shadow: 0 0 0 3px #eeeaff;
+}
+
+/* 8. Estilo dos botões */
+button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7359c7;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #5941a8;
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid #b8a8f5;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* 9. Mensagens do jogo */
+#mensagem {
+    min-height: 25px;
+    margin: 22px 0;
+    color: #6049ad;
+    font-weight: bold;
+}
+
+/* 10. Letras utilizadas */
+.area-letras {
+    padding: 15px;
+    background-color: #f5f3fb;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.area-letras span {
+    color: #51476c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#letras-usadas {
+    margin-bottom: 0;
+    color: #8069c8;
+    overflow-wrap: anywhere;
+}
+
+/* 11. Botão de nova partida */
+#btn-reiniciar {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #299b76;
+}
+
+#btn-reiniciar:hover {
+    background-color: #207b5e;
+}
+
+/* 12. Rodapé */
+footer {
+    margin-top: 25px;
+    color: #aaa3bb;
+    font-size: 12px;
+}
+
+/* 13. Responsividade para celulares */
+@media (max-width: 480px) {
+
+    .jogo {
+        padding: 23px 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .informacoes {
+        gap: 8px;
+    }
+
+    .cartao-info {
+        padding: 12px 6px;
+    }
+
+    .entrada {
+        flex-wrap: wrap;
+    }
+}
+
